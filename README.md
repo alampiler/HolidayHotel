@@ -1,0 +1,2 @@
+# HolidayHotel
+Hotel template
