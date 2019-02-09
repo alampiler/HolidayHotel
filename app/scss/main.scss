@@ -653,6 +653,10 @@ input:focus{
             font: normal normal 30px 'Georgia', sans-serif;
           }
 
+        .b-bottom{
+          border-bottom: 1px solid $docBackground;
+        }
+
         .miniGallery_blocks{
           display: flex;
           flex-flow: row wrap;

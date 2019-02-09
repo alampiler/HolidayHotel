@@ -579,6 +579,8 @@ input:focus {
         border-bottom: 1px solid #5b3a27;
         padding-bottom: 10px;
         font: normal normal 30px 'Georgia', sans-serif; }
+      .main .second_sect .info_menu .miniGallery .b-bottom {
+        border-bottom: 1px solid #412718; }
       .main .second_sect .info_menu .miniGallery .miniGallery_blocks {
         display: -webkit-box;
         display: -webkit-flex;
