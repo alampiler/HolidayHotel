@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5d4f442-e85a-4f0d-a7b8-3a1796834f6e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/dist/img/ajax-loader.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,11 +19,11 @@
     <favorites_list name="HolidayHotel" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/rooms.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
+            <state relative-caret-position="1127">
               <caret line="306" column="22" selection-start-line="306" selection-start-column="22" selection-end-line="306" selection-end-column="22" />
               <folding>
                 <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
@@ -36,8 +38,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/gallery.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="219" column="14" lean-forward="true" selection-start-line="219" selection-start-column="14" selection-end-line="219" selection-end-column="14" />
+            <state relative-caret-position="1127">
+              <caret line="219" column="14" selection-start-line="219" selection-start-column="14" selection-end-line="219" selection-end-column="14" />
               <folding>
                 <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#section#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" />
@@ -48,11 +50,44 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scss/main.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="473">
-              <caret line="658" lean-forward="true" selection-start-line="658" selection-end-line="658" />
+              <caret line="658" selection-start-line="658" selection-end-line="658" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gulpfile.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="39" column="97" selection-start-line="39" selection-start-column="97" selection-end-line="39" selection-end-column="97" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dist/css/libs.min.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="447">
+              <caret line="3" column="52993" selection-start-line="3" selection-start-column="52993" selection-end-line="3" selection-end-column="52993" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/faq.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="460">
+              <caret line="163" selection-start-line="163" selection-end-line="163" />
+              <folding>
+                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#section#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#aside#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -75,6 +110,9 @@
         <option value="$PROJECT_DIR$/app/faq.html" />
         <option value="$PROJECT_DIR$/app/rooms.html" />
         <option value="$PROJECT_DIR$/app/gallery.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/gulpfile.js" />
+        <option value="$PROJECT_DIR$/dist/css/libs.min.css" />
       </list>
     </option>
   </component>
@@ -105,8 +143,13 @@
             <path>
               <item name="HolidayHotel" type="b2602c69:ProjectViewProjectNode" />
               <item name="HolidayHotel" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="scss" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HolidayHotel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HolidayHotel" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -120,6 +163,16 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Programing\Проекти\HolidayHotel\dist\img" />
+      <recent name="D:\Programing\Проекти\HolidayHotel\dist\img\rooms_images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Programing\Проекти\HolidayHotel\app\libs\slick-carousel\slick" />
+      <recent name="D:\Programing\Проекти\HolidayHotel\app\img" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -143,12 +196,14 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1549706208470</updated>
-      <workItem from="1549706211080" duration="4869000" />
+      <workItem from="1549706211080" duration="5204000" />
+      <workItem from="1549739242200" duration="793000" />
+      <workItem from="1549792334851" duration="656000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4869000" />
+    <option name="totallyTimeSpent" value="6653000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -163,7 +218,7 @@
     <frame x="-8" y="-8" width="1696" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1314181" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13386308" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="2" />
@@ -176,7 +231,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Favorites" order="3" sideWeight="0.49886364" weight="0.3294621" />
-      <window_info active="true" anchor="right" id="Terminal" order="4" sideWeight="0.5016949" side_tool="true" visible="true" weight="0.28667483" />
+      <window_info anchor="right" id="Terminal" order="4" sideWeight="0.5016949" side_tool="true" visible="true" weight="0.28667483" />
       <window_info anchor="right" id="Version Control" order="5" sideWeight="0.50113636" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="TODO" order="6" sideWeight="0.50113636" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Structure" order="7" sideWeight="0.49886364" weight="0.25" />
@@ -186,11 +241,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1242" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -201,20 +251,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/faq.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="224" column="10" selection-start-line="224" selection-start-column="10" selection-end-line="224" selection-end-column="10" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#section#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#aside#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#aside#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -231,7 +267,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/rooms.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
+        <state relative-caret-position="1127">
           <caret line="306" column="22" selection-start-line="306" selection-start-column="22" selection-end-line="306" selection-end-column="22" />
           <folding>
             <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
@@ -244,8 +280,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/gallery.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="219" column="14" lean-forward="true" selection-start-line="219" selection-start-column="14" selection-end-line="219" selection-end-column="14" />
+        <state relative-caret-position="1127">
+          <caret line="219" column="14" selection-start-line="219" selection-start-column="14" selection-end-line="219" selection-end-column="14" />
           <folding>
             <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#section#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" />
@@ -256,12 +292,46 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/faq.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="163" selection-start-line="163" selection-end-line="163" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#section#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#aside#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scss/main.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="473">
-          <caret line="658" lean-forward="true" selection-start-line="658" selection-end-line="658" />
+          <caret line="658" selection-start-line="658" selection-end-line="658" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/libs/slick-carousel/slick/ajax-loader.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="39" column="97" selection-start-line="39" selection-start-column="97" selection-end-line="39" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/css/libs.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="3" column="52993" selection-start-line="3" selection-start-column="52993" selection-end-line="3" selection-end-column="52993" />
         </state>
       </provider>
     </entry>

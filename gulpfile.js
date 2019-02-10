@@ -37,7 +37,7 @@ var gulp            = require('gulp'),
     });
 
     gulp.task('fonts', () => {
-       return gulp.src('app/libs/font-awesome/webfonts/*')
+       return gulp.src(['app/libs/font-awesome/webfonts/*','app/libs/slick-carousel/slick/fonts/*'])
            .pipe(gulp.dest('app/fonts'))
     });
 
@@ -98,11 +98,11 @@ var gulp            = require('gulp'),
             .pipe(gulp.dest('dist'));
        var buildCSS = gulp.src(['app/css/main.css', 'app/css/libs.min.css', 'app/css/reset.css'])
            .pipe(gulp.dest('dist/css'));
-       var buildJS = gulp.src('app/js/main.js')
+       var buildJS = gulp.src('app/js/*.js')
            .pipe(gulp.dest('dist/js'));
        var buildFonts = gulp.src('app/fonts/**/*.*')
            .pipe(gulp.dest('dist/fonts'));
-        var buildImages = gulp.src('app/img/*')
+        var buildImages = gulp.src('app/img/**/*')
             .pipe(gulp.dest('dist/img'));
     });
 
