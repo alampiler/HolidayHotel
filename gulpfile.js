@@ -18,12 +18,6 @@ var gulp            = require('gulp'),
     plumber         =require('gulp-plumber');
 
 
-    // gulp.task('htmlBuild', function () {
-    //     gulp.src('app/**/*.html')
-    //         .pipe(rigger())
-    //         .pipe(gulp.dest('dist/'))
-    // });
-
 
     gulp.task('scss', () => {
        return gulp.src(['app/scss/reset.scss', 'app/scss/main.scss'])
