@@ -243,7 +243,9 @@ input:focus {
         background: #20130b;
         border: 1px solid #a46461;
         margin: 4px 0 16px 0;
-        height: 22px; }
+        height: 22px;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box; }
       .main .first_sect .order:not(h4) {
         font: normal normal 14px 'Verdana', sans-serif; }
       .main .first_sect .order .arrival_date,
@@ -285,7 +287,7 @@ input:focus {
           width: 47%; }
         .main .first_sect .order .people_age .adult_age {
           margin-right: 8px; }
-      .main .first_sect .order button {
+      .main .first_sect .order button[type="submit"] {
         width: 100%;
         background: #a46461;
         border: 1px solid black;
@@ -295,10 +297,10 @@ input:focus {
         -webkit-transition: all 0.2s linear;
         -o-transition: all 0.2s linear;
         transition: all 0.2s linear; }
-        .main .first_sect .order button:hover {
+        .main .first_sect .order button[type="submit"]:hover {
           -webkit-box-shadow: 0 0 4px 1px #a46461;
                   box-shadow: 0 0 4px 1px #a46461; }
-        .main .first_sect .order button:active {
+        .main .first_sect .order button[type="submit"]:active {
           outline: none; }
       .main .first_sect .order .room_info {
         position: relative;
@@ -307,6 +309,7 @@ input:focus {
           margin: 0; }
         .main .first_sect .order .room_info .pdf_file {
           background: #e9e9c0;
+          border: none;
           padding: 10px;
           color: #a46461; }
           .main .first_sect .order .room_info .pdf_file img {
@@ -745,6 +748,26 @@ input:focus {
             justify-content: space-between;
     background: #311d11; }
 
+@media screen and (min-width: 1680px) {
+  .main .first_sect .slider .slider_main .slick-list .slick-track .slick-slide .slider_elem {
+    height: 580px; }
+  .main .first_sect .order .room_info {
+    position: relative;
+    top: 28%; }
+    .main .first_sect .order .room_info h4 {
+      margin: 0; }
+    .main .first_sect .order .room_info .pdf_file {
+      background: #e9e9c0;
+      border: none;
+      padding: 10px;
+      color: #a46461; }
+      .main .first_sect .order .room_info .pdf_file img {
+        float: left; }
+      .main .first_sect .order .room_info .pdf_file p {
+        width: 80%;
+        float: right;
+        font: normal normal 11px 'Verdana', sans-serif; } }
+
 @media screen and (max-width: 1280px) {
   .main .first_sect .slider .slider_main .slick-list .slick-track .slick-slide .slider_elem {
     height: 480px !important; }
@@ -774,14 +797,93 @@ input:focus {
       .main .first_sect .slider .slider_main {
         width: 100%; }
         .main .first_sect .slider .slider_main .slick-list .slick-track .slick-slide .slider_elem {
-          height: 100%; }
+          height: 50vw !important; }
       .main .first_sect .slider .slider_nav .slick-list .slick-track .slick-slide {
         margin: 0 22px;
-        height: 100%; }
+        height: 15vw !important; }
         .main .first_sect .slider .slider_nav .slick-list .slick-track .slick-slide .slider_elem_nav {
-          height: 100%; }
-    .main .first_sect .order button {
-      height: 90px; }
+          height: 15vw !important; }
+    .main .first_sect .order {
+      width: 90%;
+      margin-top: 40px; }
+      .main .first_sect .order label {
+        width: 100%; }
+      .main .first_sect .order input {
+        width: 100%;
+        padding: 15px 5px; }
+      .main .first_sect .order:not(h4) {
+        font: normal normal 14px 'Verdana', sans-serif; }
+      .main .first_sect .order .arrival_date,
+      .main .first_sect .order .departure_date {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between; }
+        .main .first_sect .order .arrival_date input,
+        .main .first_sect .order .departure_date input {
+          width: 30%; }
+      .main .first_sect .order .people_age {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-flow: row wrap;
+            -ms-flex-flow: row wrap;
+                flex-flow: row wrap;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        .main .first_sect .order .people_age .adults,
+        .main .first_sect .order .people_age .children {
+          width: 100%; }
+        .main .first_sect .order .people_age .adult_age,
+        .main .first_sect .order .people_age .children_age {
+          width: 47%; }
+        .main .first_sect .order .people_age .adult_age {
+          margin-right: 8px; }
+      .main .first_sect .order button[type="submit"] {
+        width: 100%;
+        background: #a46461;
+        border: 1px solid black;
+        color: #fff;
+        height: 50px;
+        margin: 10px 0 20px 0;
+        padding: 6px 0;
+        -webkit-transition: all 0.2s linear;
+        -o-transition: all 0.2s linear;
+        transition: all 0.2s linear; }
+        .main .first_sect .order button[type="submit"]:hover {
+          -webkit-box-shadow: 0 0 4px 1px #a46461;
+                  box-shadow: 0 0 4px 1px #a46461; }
+        .main .first_sect .order button[type="submit"]:active {
+          outline: none; }
+      .main .first_sect .order .room_info {
+        position: relative;
+        top: 0; }
+        .main .first_sect .order .room_info h4 {
+          margin: 0; }
+        .main .first_sect .order .room_info .pdf_file {
+          width: 100%;
+          background: #e9e9c0;
+          padding: 10px;
+          color: #a46461; }
+          .main .first_sect .order .room_info .pdf_file img {
+            float: left; }
+          .main .first_sect .order .room_info .pdf_file p {
+            width: 80%;
+            float: right;
+            font: normal normal 11px 'Verdana', sans-serif; }
   .main .second_sect .home_block img {
     height: 110px; }
   .main .second_sect .room_block .room_container {
@@ -925,104 +1027,8 @@ input:focus {
     .header .mob_btn {
       color: #8f5f26;
       display: block; }
-  .main .first_sect .slider .slider_main .slick-list .slick-track .slick-slide .slider_elem {
-    height: 380px !important; }
   .main .first_sect .slider .slider_nav .slick-list .slick-track .slick-slide {
-    height: 116px !important;
     margin: 0 0.2%; }
-    .main .first_sect .slider .slider_nav .slick-list .slick-track .slick-slide .slider_elem_nav {
-      height: 116px !important; }
-  .main .first_sect .order {
-    border: 1px solid #a46461;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    width: 90%;
-    padding: 8px; }
-    .main .first_sect .order h4 {
-      font: normal normal 22px 'Georgia', sans-serif;
-      border-bottom: 1px solid #cccccc;
-      padding-bottom: 6px;
-      margin-top: 0; }
-    .main .first_sect .order label {
-      width: 100%; }
-    .main .first_sect .order input {
-      color: #8f5f26 !important;
-      width: 98.8%;
-      background: #20130b;
-      border: 1px solid #a46461;
-      margin: 4px 0 16px 0;
-      height: 22px; }
-    .main .first_sect .order:not(h4) {
-      font: normal normal 14px 'Verdana', sans-serif; }
-    .main .first_sect .order .arrival_date,
-    .main .first_sect .order .departure_date {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-      -webkit-justify-content: space-between;
-          -ms-flex-pack: justify;
-              justify-content: space-between; }
-      .main .first_sect .order .arrival_date input,
-      .main .first_sect .order .departure_date input {
-        width: 30%; }
-    .main .first_sect .order .people_age {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -webkit-flex-flow: row wrap;
-          -ms-flex-flow: row wrap;
-              flex-flow: row wrap;
-      -webkit-box-pack: justify;
-      -webkit-justify-content: space-between;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-          -ms-flex-align: center;
-              align-items: center; }
-      .main .first_sect .order .people_age .adults,
-      .main .first_sect .order .people_age .children {
-        width: 100%; }
-      .main .first_sect .order .people_age .adult_age,
-      .main .first_sect .order .people_age .children_age {
-        width: 47%; }
-      .main .first_sect .order .people_age .adult_age {
-        margin-right: 8px; }
-    .main .first_sect .order button {
-      width: 100%;
-      background: #a46461;
-      border: 1px solid black;
-      color: #fff;
-      margin: 10px 0 20px 0;
-      padding: 6px 0;
-      -webkit-transition: all 0.2s linear;
-      -o-transition: all 0.2s linear;
-      transition: all 0.2s linear; }
-      .main .first_sect .order button:hover {
-        -webkit-box-shadow: 0 0 4px 1px #a46461;
-                box-shadow: 0 0 4px 1px #a46461; }
-      .main .first_sect .order button:active {
-        outline: none; }
-    .main .first_sect .order .room_info {
-      position: relative;
-      top: 15%; }
-      .main .first_sect .order .room_info h4 {
-        margin: 0; }
-      .main .first_sect .order .room_info .pdf_file {
-        background: #e9e9c0;
-        padding: 10px;
-        color: #a46461; }
-        .main .first_sect .order .room_info .pdf_file img {
-          float: left; }
-        .main .first_sect .order .room_info .pdf_file p {
-          width: 80%;
-          float: right;
-          font: normal normal 11px 'Verdana', sans-serif; }
   .main .second_sect {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1071,104 +1077,6 @@ input:focus {
 @media screen and (max-width: 520px) {
   .gallery_images_fullSize .fullSize_image {
     height: 400px; }
-  .main .first_sect .slider .slider_main .slick-list .slick-track .slick-slide .slider_elem {
-    height: 260px !important; }
-  .main .first_sect .slider .slider_nav .slick-list .slick-track .slick-slide {
-    height: 76px !important;
-    margin: 0 0.2%; }
-    .main .first_sect .slider .slider_nav .slick-list .slick-track .slick-slide .slider_elem_nav {
-      height: 76px !important; }
-  .main .first_sect .order {
-    border: 1px solid #a46461;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    width: 90%;
-    padding: 8px; }
-    .main .first_sect .order h4 {
-      font: normal normal 22px 'Georgia', sans-serif;
-      border-bottom: 1px solid #cccccc;
-      padding-bottom: 6px;
-      margin-top: 0; }
-    .main .first_sect .order label {
-      width: 100%; }
-    .main .first_sect .order input {
-      color: #8f5f26 !important;
-      width: 98.8%;
-      background: #20130b;
-      border: 1px solid #a46461;
-      margin: 4px 0 16px 0;
-      height: 22px; }
-    .main .first_sect .order:not(h4) {
-      font: normal normal 14px 'Verdana', sans-serif; }
-    .main .first_sect .order .arrival_date,
-    .main .first_sect .order .departure_date {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-      -webkit-justify-content: space-between;
-          -ms-flex-pack: justify;
-              justify-content: space-between; }
-      .main .first_sect .order .arrival_date input,
-      .main .first_sect .order .departure_date input {
-        width: 30%; }
-    .main .first_sect .order .people_age {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -webkit-flex-flow: row wrap;
-          -ms-flex-flow: row wrap;
-              flex-flow: row wrap;
-      -webkit-box-pack: justify;
-      -webkit-justify-content: space-between;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-          -ms-flex-align: center;
-              align-items: center; }
-      .main .first_sect .order .people_age .adults,
-      .main .first_sect .order .people_age .children {
-        width: 100%; }
-      .main .first_sect .order .people_age .adult_age,
-      .main .first_sect .order .people_age .children_age {
-        width: 47%; }
-      .main .first_sect .order .people_age .adult_age {
-        margin-right: 8px; }
-    .main .first_sect .order button {
-      width: 100%;
-      background: #a46461;
-      border: 1px solid black;
-      color: #fff;
-      margin: 10px 0 20px 0;
-      padding: 6px 0;
-      -webkit-transition: all 0.2s linear;
-      -o-transition: all 0.2s linear;
-      transition: all 0.2s linear; }
-      .main .first_sect .order button:hover {
-        -webkit-box-shadow: 0 0 4px 1px #a46461;
-                box-shadow: 0 0 4px 1px #a46461; }
-      .main .first_sect .order button:active {
-        outline: none; }
-    .main .first_sect .order .room_info {
-      position: relative;
-      top: 15%; }
-      .main .first_sect .order .room_info h4 {
-        margin: 0; }
-      .main .first_sect .order .room_info .pdf_file {
-        background: #e9e9c0;
-        padding: 10px;
-        color: #a46461; }
-        .main .first_sect .order .room_info .pdf_file img {
-          float: left; }
-        .main .first_sect .order .room_info .pdf_file p {
-          width: 80%;
-          float: right;
-          font: normal normal 11px 'Verdana', sans-serif; }
   .main .second_sect {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

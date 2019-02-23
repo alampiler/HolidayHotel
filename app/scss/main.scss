@@ -200,7 +200,6 @@ input:focus{
           height: 97.8%;
           top: 51.6%;
           background: rgba(0,0,0,0.4);
-
         }
 
         .slick-next{right: 0}
@@ -249,7 +248,7 @@ input:focus{
         border: 1px solid $redColor;
         margin: 4px 0 16px 0;
         height: 22px;
-        
+        box-sizing: border-box;
       }
 
       &:not(h4){font: normal normal 14px 'Verdana', sans-serif}
@@ -278,7 +277,7 @@ input:focus{
         .adult_age{margin-right: 8px}
       }
 
-      button{
+      button[type="submit"]{
         width: 100%;
         background: $redColor;
         border: 1px solid black;
@@ -286,7 +285,6 @@ input:focus{
         margin: 10px 0 20px 0;
         padding: 6px 0;
         transition: all 0.2s linear;
-
 
         &:hover{
           box-shadow: 0 0 4px 1px $redColor;
@@ -306,6 +304,7 @@ input:focus{
 
         .pdf_file{
           background: $newsBlock;
+          border: none;
           padding: 10px;
           color: $redColor;
 
@@ -689,7 +688,6 @@ input:focus{
   }
 }
 
-
 .footer{
   width: 100%;
   display: flex;
@@ -784,9 +782,52 @@ input:focus{
   }
 }
 
+@media screen and (min-width: $laptopL){
+  .main{
+    .first_sect {
+      .slider{
+        .slider_main{
+          .slick-list{
+            .slick-track{
+              .slick-slide{
+                .slider_elem {height: 580px}
+              }
+            }
+          }
+        }
+      }
+
+      .order{
+
+
+        .room_info{
+          position: relative;
+          top: 28%;
+
+          h4{margin: 0}
+
+          .pdf_file{
+            background: $newsBlock;
+            border: none;
+            padding: 10px;
+            color: $redColor;
+
+            img{float: left}
+
+            p{
+              width: 80%;
+              float: right;
+              font: normal normal 11px 'Verdana', sans-serif;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: $laptopM) {
   .main {
-
     .first_sect {
       .slider{
         .slider_main{
@@ -830,7 +871,6 @@ input:focus{
   }
 
   .main{
-
     .first_sect {
       flex-flow: column nowrap;
       align-items: center;
@@ -844,7 +884,7 @@ input:focus{
           .slick-list{
             .slick-track{
               .slick-slide{
-                .slider_elem{height: 100%}
+                .slider_elem{height: 50vw !important}
               }
             }
           }
@@ -855,10 +895,9 @@ input:focus{
            .slick-track{
               .slick-slide{
                 margin: 0 22px;
-                height: 100%;
-                .slider_elem_nav{
-                  height: 100%;
-                }
+                height: 15vw !important;
+
+                .slider_elem_nav{height: 15vw !important}
               }
             }
           }
@@ -866,7 +905,86 @@ input:focus{
       }
 
       .order{
-        button{height: 90px}
+        width: 90%;
+        margin-top: 40px;
+
+        label{width: 100%}
+
+        input{
+          width: 100%;
+          padding: 15px 5px;
+        }
+
+        &:not(h4){font: normal normal 14px 'Verdana', sans-serif}
+
+
+        .arrival_date,
+        .departure_date{
+          display: flex;
+          justify-content: space-between;
+
+          input{width: 30%}
+        }
+
+        .people_age{
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: space-between;
+          align-items: center;
+
+          .adults,
+          .children{width: 100%}
+
+          .adult_age,
+          .children_age{width: 47%}
+
+          .adult_age{margin-right: 8px}
+
+
+        }
+
+        button[type="submit"]{
+          width: 100%;
+          background: $redColor;
+          border: 1px solid black;
+          color: #fff;
+          height: 50px;
+          margin: 10px 0 20px 0;
+          padding: 6px 0;
+          transition: all 0.2s linear;
+
+
+          &:hover{
+            box-shadow: 0 0 4px 1px $redColor;
+          }
+
+          &:active{
+            outline: none;
+          }
+
+        }
+
+        .room_info{
+          position: relative;
+          top: 0;
+
+          h4{margin: 0}
+
+          .pdf_file{
+            width: 100%;
+            background: $newsBlock;
+            padding: 10px;
+            color: $redColor;
+
+            img{float: left}
+
+            p{
+              width: 80%;
+              float: right;
+              font: normal normal 11px 'Verdana', sans-serif;
+            }
+          }
+        }
       }
     }
 
@@ -1041,118 +1159,10 @@ input:focus{
   .main{
     .first_sect {
       .slider{
-        .slider_main{
-          .slick-list{
-            .slick-track{
-              .slick-slide{
-                .slider_elem{height: 380px !important}
-              }
-            }
-          }
-        }
-
         .slider_nav{
           .slick-list{
             .slick-track{
-              .slick-slide{
-                height: 116px !important;
-                margin: 0 0.2%;
-
-                .slider_elem_nav{height: 116px !important}
-              }
-            }
-          }
-        }
-      }
-
-      .order{
-        border: 1px solid $redColor;
-        box-sizing: border-box;
-        width: 90%;
-        padding: 8px;
-
-        h4{
-          font: normal normal 22px 'Georgia', sans-serif;
-          border-bottom: 1px solid $textColor;
-          padding-bottom: 6px;
-          margin-top: 0;
-        }
-
-        label{width: 100%}
-
-        input{
-          color: $navElementBackground !important;
-          width: 98.8%;
-          background: $inputBackground;
-          border: 1px solid $redColor;
-          margin: 4px 0 16px 0;
-          height: 22px;
-
-        }
-
-        &:not(h4){font: normal normal 14px 'Verdana', sans-serif}
-
-
-        .arrival_date,
-        .departure_date{
-          display: flex;
-          justify-content: space-between;
-
-          input{width: 30%}
-        }
-
-        .people_age{
-          display: flex;
-          flex-flow: row wrap;
-          justify-content: space-between;
-          align-items: center;
-
-          .adults,
-          .children{width: 100%}
-
-          .adult_age,
-          .children_age{width: 47%}
-
-          .adult_age{margin-right: 8px}
-        }
-
-        button{
-          width: 100%;
-          background: $redColor;
-          border: 1px solid black;
-          color: #fff;
-          margin: 10px 0 20px 0;
-          padding: 6px 0;
-          transition: all 0.2s linear;
-
-
-          &:hover{
-            box-shadow: 0 0 4px 1px $redColor;
-          }
-
-          &:active{
-            outline: none;
-          }
-
-        }
-
-        .room_info{
-          position: relative;
-          top: 15%;
-
-          h4{margin: 0}
-
-          .pdf_file{
-            background: $newsBlock;
-            padding: 10px;
-            color: $redColor;
-
-            img{float: left}
-
-            p{
-              width: 80%;
-              float: right;
-              font: normal normal 11px 'Verdana', sans-serif;
+              .slick-slide{margin: 0 0.2%}
             }
           }
         }
@@ -1175,10 +1185,8 @@ input:focus{
         .miniGallery{
           .miniGallery_blocks{
             justify-content: center !important;
-            .miniGallery_block{
-                margin: 0 11px 10px 10px;
-            }
 
+            .miniGallery_block{margin: 0 11px 10px 10px}
           }
         }
       }
@@ -1203,132 +1211,10 @@ input:focus{
 @media screen and (max-width: $tabletS){
 
   .gallery_images_fullSize{
-    .fullSize_image{
-      height: 400px;
-    }
+    .fullSize_image{height: 400px}
   }
 
   .main{
-  .first_sect {
-    .slider{
-      .slider_main{
-        .slick-list{
-          .slick-track{
-            .slick-slide{
-              .slider_elem{height: 260px !important}
-            }
-          }
-        }
-      }
-
-      .slider_nav{
-        .slick-list{
-          .slick-track{
-            .slick-slide{
-              height: 76px !important;
-              margin: 0 0.2%;
-
-              .slider_elem_nav{height: 76px !important}
-            }
-          }
-        }
-      }
-    }
-
-    .order{
-      border: 1px solid $redColor;
-      box-sizing: border-box;
-      width: 90%;
-      padding: 8px;
-
-      h4{
-        font: normal normal 22px 'Georgia', sans-serif;
-        border-bottom: 1px solid $textColor;
-        padding-bottom: 6px;
-        margin-top: 0;
-      }
-
-      label{width: 100%}
-
-      input{
-        color: $navElementBackground !important;
-        width: 98.8%;
-        background: $inputBackground;
-        border: 1px solid $redColor;
-        margin: 4px 0 16px 0;
-        height: 22px;
-
-      }
-
-      &:not(h4){font: normal normal 14px 'Verdana', sans-serif}
-
-
-      .arrival_date,
-      .departure_date{
-        display: flex;
-        justify-content: space-between;
-
-        input{width: 30%}
-      }
-
-      .people_age{
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        align-items: center;
-
-        .adults,
-        .children{width: 100%}
-
-        .adult_age,
-        .children_age{width: 47%}
-
-        .adult_age{margin-right: 8px}
-      }
-
-      button{
-        width: 100%;
-        background: $redColor;
-        border: 1px solid black;
-        color: #fff;
-        margin: 10px 0 20px 0;
-        padding: 6px 0;
-        transition: all 0.2s linear;
-
-
-        &:hover{
-          box-shadow: 0 0 4px 1px $redColor;
-        }
-
-        &:active{
-          outline: none;
-        }
-
-      }
-
-      .room_info{
-        position: relative;
-        top: 15%;
-
-        h4{margin: 0}
-
-        .pdf_file{
-          background: $newsBlock;
-          padding: 10px;
-          color: $redColor;
-
-          img{float: left}
-
-          p{
-            width: 80%;
-            float: right;
-            font: normal normal 11px 'Verdana', sans-serif;
-          }
-        }
-      }
-    }
-  }
-
   .second_sect{
     flex-flow: column nowrap;
     align-items: center;
@@ -1344,9 +1230,11 @@ input:focus{
 
       .info_hotel{
         img{height: 140px}
+
         .info_hotel_blocks{
           flex-direction: column;
           align-items: center;
+
           .info_hotel_block{
             width: 90%;
             margin-right: 0 !important;
@@ -1406,6 +1294,7 @@ input:focus{
           .info_room_blocks{
             flex-direction: column;
             align-items: center;
+
             .info_room_block{
               width: 90%;
               margin-top: 30px;
