@@ -4,6 +4,10 @@
 body{
   background: $docBackground;
   color: $textColor;
+  max-width: 1690px;
+  margin: 0 auto;
+  border-left: 1px solid $inputBackground;
+  border-right: 1px solid $inputBackground;
 }
 
 li{list-style: none}
@@ -16,13 +20,101 @@ img{
   box-sizing: border-box;
 }
 
-button{
-  cursor: pointer;
-}
+button{cursor: pointer}
 
 button:focus,
-input:focus{
-  outline: none;
+input:focus{outline: none}
+
+@mixin order_form{
+  .order{
+    border: 1px solid $redColor;
+    box-sizing: border-box;
+    width: 30%;
+    padding: 8px;
+
+    h4{
+      font: normal normal 22px 'Georgia', sans-serif;
+      border-bottom: 1px solid $textColor;
+      padding-bottom: 6px;
+      margin-top: 0;
+    }
+
+    label{width: 100%}
+
+    input{
+      color: $navElementBackground !important;
+      width: 98.8%;
+      background: $inputBackground;
+      border: 1px solid $redColor;
+      margin: 4px 0 16px 0;
+      height: 22px;
+      box-sizing: border-box;
+
+      &:focus{box-shadow: 0 0 1px $navActiveElementBackground}
+    }
+
+    &:not(h4){font: normal normal 14px 'Verdana', sans-serif}
+
+
+    .arrival_date,
+    .departure_date{
+      display: flex;
+      justify-content: space-between;
+
+      input{width: 30%}
+    }
+
+    .people_age{
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-items: center;
+
+      .adults,
+      .children{width: 100%}
+
+      .adult_age,
+      .children_age{width: 47%}
+
+      .adult_age{margin-right: 8px}
+    }
+
+    button[type="submit"]{
+      width: 100%;
+      background: $redColor;
+      border: 1px solid black;
+      color: #fff;
+      margin: 10px 0 20px 0;
+      padding: 6px 0;
+      transition: all 0.2s linear;
+
+      &:hover{box-shadow: 0 0 4px 1px $redColor}
+
+      &:active{outline: none}
+    }
+
+    .room_info{
+      position: relative;
+      top: 15%;
+
+      h4{margin: 0}
+
+      .pdf_file{
+        background: $newsBlock;
+        border: none;
+        padding: 10px;
+        color: $redColor;
+
+        img{float: left}
+
+        p{
+          width: 80%;
+          float: right;
+          font: normal normal 11px 'Verdana', sans-serif;
+        }
+      }
+    }
+  }
 }
 
 .header{
@@ -71,12 +163,11 @@ input:focus{
       .menu_elem{
         &:not(:last-child){margin-right: 4%}
         background: $navElementBackground;
-        height: 45px;
+        height: 42px;
 
         a{
           color: #fff;
-          //padding: 14px 20px;
-          padding: 11.8px 20px 15.5px 20px;
+          padding: 13.8px 20px 14.5px 20px;
           line-height: 3;
           transition: all 0.2s linear;
 
@@ -105,13 +196,9 @@ input:focus{
     }
   }
 
-  .mob_btn{
-    display: none;
-  }
+  .mob_btn{display: none}
   
-  .nav_mobile{
-    display: none;
-  }
+  .nav_mobile{display: none}
 }
 
 .active_gallery_block{
@@ -119,12 +206,10 @@ input:focus{
   width: 100%;
   height: 400%;
   z-index: 100;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.5);
   position: absolute;
 
-  &.active{
-    display: block;
-  }
+  &.active{display: block}
 }
 
 .gallery_images_fullSize{
@@ -139,18 +224,55 @@ input:focus{
     z-index: 100;
     transition: all 0.4s linear;
 
-    &.active{
-      transform: scale(1);
-    }
+    &.active{transform: scale(1)}
 
     img{
       width: 100%;
       height: 100%;
     }
-
   }
 }
 
+.modal_room_order{
+  display: none;
+  @include order_form;
+  z-index: 50;
+
+  .modal_bg{
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 400%;
+    position: absolute;
+    z-index: 50;
+  }
+
+  .order{
+    width: 30%;
+    padding-top: 0;
+    padding-bottom: 0;
+    top: 20%;
+    left: 35%;
+    position: fixed;
+    background-color: $docBackground;
+    z-index: 1000;
+    box-sizing: padding-box;
+
+    .close{
+      font-weight: bold;
+      font-size: 20px;
+      color: $redColor;
+      cursor: pointer;
+      float: right;
+      display: inline-block;
+
+      &:hover{text-shadow: 0 0 4px $redColor}
+    }
+
+    h4{text-align: center}
+
+    button[type="submit"]{margin-bottom: 10px}
+  }
+}
 
 .main{
   width: 96%;
@@ -226,98 +348,7 @@ input:focus{
       }
     }
 
-    .order{
-      border: 1px solid $redColor;
-      box-sizing: border-box;
-      width: 30%;
-      padding: 8px;
-
-      h4{
-        font: normal normal 22px 'Georgia', sans-serif;
-        border-bottom: 1px solid $textColor;
-        padding-bottom: 6px;
-        margin-top: 0;
-      }
-
-      label{width: 100%}
-
-      input{
-        color: $navElementBackground !important;
-        width: 98.8%;
-        background: $inputBackground;
-        border: 1px solid $redColor;
-        margin: 4px 0 16px 0;
-        height: 22px;
-        box-sizing: border-box;
-      }
-
-      &:not(h4){font: normal normal 14px 'Verdana', sans-serif}
-
-
-      .arrival_date,
-      .departure_date{
-        display: flex;
-        justify-content: space-between;
-
-        input{width: 30%}
-      }
-
-      .people_age{
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        align-items: center;
-
-        .adults,
-        .children{width: 100%}
-
-        .adult_age,
-        .children_age{width: 47%}
-
-        .adult_age{margin-right: 8px}
-      }
-
-      button[type="submit"]{
-        width: 100%;
-        background: $redColor;
-        border: 1px solid black;
-        color: #fff;
-        margin: 10px 0 20px 0;
-        padding: 6px 0;
-        transition: all 0.2s linear;
-
-        &:hover{
-          box-shadow: 0 0 4px 1px $redColor;
-        }
-
-        &:active{
-          outline: none;
-        }
-
-      }
-
-      .room_info{
-        position: relative;
-        top: 15%;
-
-        h4{margin: 0}
-
-        .pdf_file{
-          background: $newsBlock;
-          border: none;
-          padding: 10px;
-          color: $redColor;
-
-          img{float: left}
-
-          p{
-            width: 80%;
-            float: right;
-            font: normal normal 11px 'Verdana', sans-serif;
-          }
-        }
-      }
-    }
+    @include order_form;
   }
 
   .second_sect{
@@ -329,6 +360,7 @@ input:focus{
     &.about,
     &.faq,
     &.room,
+    &.post,
     &.gallery{
       background: $pageBackground;
       margin-top: 0;
@@ -349,8 +381,10 @@ input:focus{
     .about_block,
     .faq_block,
     .room_block,
+    .post_block,
     .gallery_block{
       padding: 20px;
+
       h3{
         margin-top: 0;
         border-bottom: 1px solid $docBackground;
@@ -358,7 +392,6 @@ input:focus{
     }
 
     .home_block{
-
       img{
         width: 100%;
         height: 200px;
@@ -373,6 +406,7 @@ input:focus{
 
       .info_hotel{
         h3{margin-top: 0}
+
         .info_hotel_blocks{
           color: #111;
 
@@ -394,7 +428,6 @@ input:focus{
               }
             }
 
-
             footer{
               position: relative;
               text-align: right;
@@ -403,9 +436,7 @@ input:focus{
                 font: bold normal 13px 'Verdana', sans-serif;
                 color: $redColor;
 
-                &:hover{
-                  text-shadow: 0 0 4px $redColor;
-                }
+                &:hover{text-shadow: 0 0 4px $redColor}
               }
             }
 
@@ -415,7 +446,6 @@ input:focus{
       }
 
       .info_room{
-
         h3{margin-top: 30px}
 
         .info_room_blocks{
@@ -425,7 +455,6 @@ input:focus{
             width: 48%;
 
             header{
-
               h4{
                 font: normal normal 13px 'Georgia', sans-serif;
                 border-bottom: 1px solid $pageBackground;
@@ -442,9 +471,7 @@ input:focus{
                 font: normal normal 13px 'Verdana', sans-serif;
                 color: $linkColor;
 
-                &:hover{
-                  text-shadow: 0 0 4px $linkColor;
-                }
+                &:hover{text-shadow: 0 0 4px $linkColor}
               }
             }
 
@@ -454,15 +481,20 @@ input:focus{
       }
     }
 
-    .about_block{
-      .about_image{
+    .about_block,
+    .post_block{
+      .about_image,
+      .post_image{
         margin: 0 auto;
+
         img{
           width: 100%;
           height: 100%;
         }
       }
-      .about_text{
+
+      .about_text,
+      .post_text{
 
         h4{font: normal normal 20px 'Georgia', sans-serif}
 
@@ -473,11 +505,10 @@ input:focus{
     .faq_block{
       .accordion{
         padding: 0;
+
         .inner{
           overflow: hidden;
           display: none;
-
-          &.show{ /*display: block;*/}
         }
 
         .accordion_elem{
@@ -505,11 +536,15 @@ input:focus{
         justify-content: flex-start;
 
         color: #111;
+
         .room_block_elem{
           margin-bottom: 20px;
           background: $newsBlock;
           width: 44%;
           padding: 10px 10px;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: space-between;
 
           header{
             text-align: center;
@@ -519,14 +554,13 @@ input:focus{
 
             h4{
               font: normal normal 20px 'Georgia', sans-serif;
-              margin: 0;
+              margin: 10px 0 0 0;
             }
 
             img{
               width: 100%;
               min-height: 200px;
               max-height: 140px;
-
             }
           }
 
@@ -535,14 +569,10 @@ input:focus{
             font: normal normal 12px 'Verdana', sans-serif;
 
             .room_count,
-            .people_count{
-              font-weight: bold;
-          }
-            .room_count{
-              span{
-                margin-left: 6.6px;
-              }
+            .people_count{font-weight: bold}
 
+            .room_count{
+              span{margin-left: 6.6px}
             }
           }
 
@@ -551,6 +581,7 @@ input:focus{
             text-align: right;
             font: bold normal 16px 'Verdana', sans-serif;
             color: $redColor;
+            z-index: 10;
 
             .order_room{
               width: 100%;
@@ -569,10 +600,7 @@ input:focus{
           }
 
 
-          &:not(:nth-child(2n)){
-            margin-right: 2%;
-          }
-
+          &:not(:nth-child(2n)){margin-right: 2%}
         }
       }
     }
@@ -596,14 +624,9 @@ input:focus{
             height: 100%;
           }
 
-          &:not(:nth-child(3n)){
-            margin-right: 3%;
-          }
+          &:not(:nth-child(3n)){margin-right: 3%}
         }
       }
-    
-
-
     }
 
     .info_menu{
@@ -637,9 +660,8 @@ input:focus{
 
             a{
               color: $linkColor;
-              &:hover{
-                text-shadow: 0 0 4px $linkColor;
-              }
+
+              &:hover{text-shadow: 0 0 4px $linkColor}
             }
           }
         }
@@ -652,9 +674,7 @@ input:focus{
             font: normal normal 30px 'Georgia', sans-serif;
           }
 
-        .b-bottom{
-          border-bottom: 1px solid $docBackground;
-        }
+        .b-bottom{border-bottom: 1px solid $docBackground}
 
         .miniGallery_blocks{
           display: flex;
@@ -798,8 +818,6 @@ input:focus{
       }
 
       .order{
-
-
         .room_info{
           position: relative;
           top: 28%;
@@ -827,6 +845,13 @@ input:focus{
 }
 
 @media screen and (max-width: $laptopM) {
+  .modal_room_order{
+    .order{
+      width: 40%;
+      left: 30%;
+    }
+  }
+
   .main {
     .first_sect {
       .slider{
@@ -844,9 +869,9 @@ input:focus{
           .slick-list{
             .slick-track{
               .slick-slide{
-                height: 166px !important;
+                height: 136px !important;
 
-                .slider_elem_nav{height: 166px !important}
+                .slider_elem_nav{height: 136px !important}
               }
             }
           }
@@ -862,7 +887,43 @@ input:focus{
   }
 }
 
-@media screen and (max-width: $laptopS){
+@media screen and (max-width: $laptopS) {
+  .main {
+    .first_sect {
+      .slider{
+        .slider_main{
+          .slick-list{
+            .slick-track{
+              .slick-slide{
+                .slider_elem{height: 480px !important}
+              }
+            }
+          }
+        }
+
+        .slider_nav{
+          .slick-list{
+            .slick-track{
+              .slick-slide{
+                height: 126px !important;
+
+                .slider_elem_nav{height: 126px !important}
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .second_sect{
+      .home_block{
+        img{height: 150px}
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $laptopES){
   .gallery_images_fullSize{
     .fullSize_image{
       left: 20%;
@@ -1032,6 +1093,24 @@ input:focus{
 }
 
 @media screen and (max-width: $tabletL){
+  .modal_room_order{
+    .order{
+      width: 80%;
+      left: 10%;
+
+      input{
+        width: 100%;
+        padding: 15px 5px;
+      }
+
+      &:not(h4){font: normal normal 14px 'Verdana', sans-serif}
+
+      button[type="submit"]{
+        padding: 20px 0 20px 0;
+      }
+    }
+  }
+
   .gallery_images_fullSize{
     .fullSize_image{
       left: 9.5%;

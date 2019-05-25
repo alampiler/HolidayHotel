@@ -139,31 +139,31 @@
 	<form action="" method="POST" class="order" >
 		<h4>Order Today !</h4>
 		<label for="name">Your Full Name:</label>
-		<input type="text" class="name" name="name" id="name">
+		<input type="text" class="name" name="name" id="name" required>
 		<label for="email">Your Email Adress:</label>
-		<input type="email" class="email" name="email" id="email">
+		<input type="email" class="email" name="email" id="email" required>
 		<label for="arrival">Arrival Date:</label>
 		<div class="arrival_date" id="arrival">
-			<input type="text" class="day" name="arr_day" id="arr_day">
-			<input type="text" class="month" name="arr_month" id="arr_month">
-			<input type="text" class="year" name="arr_year" id="arr_year">
+			<input type="text" class="day" name="arr_day" id="arr_day" required placeholder="Day">
+			<input type="text" class="month" name="arr_month" id="arr_month" required placeholder="Month">
+			<input type="text" class="year" name="arr_year" id="arr_year" required placeholder="Year">
 		</div>
 		<label for="departure">Departure Date:</label>
 		<div class="departure_date" id="departure">
-			<input type="text" class="day" name="dep_day" id="dep_day">
-			<input type="text" class="month" name="dep_month" id="dep_month">
-			<input type="text" class="year" name="dep_year" id="dep_year">
+			<input type="text" class="day" name="dep_day" id="dep_day" required placeholder="Day">
+			<input type="text" class="month" name="dep_month" id="dep_month" required placeholder="Month">
+			<input type="text" class="year" name="dep_year" id="dep_year" required placeholder="Year">
 		</div>
 		<div class="people_age">
 			<div class="adult_age">
 				<label for="adults">Adults:</label>
 				<br>
-				<input type="text" class="adults" name="adults" id="adults">
+				<input type="text" class="adults" name="adults" id="adults" required>
 			</div>
 			<div class="children_age">
 				<label for="children">Children:</label>
 				<br>
-				<input type="text" class="children" name="children" id="children">
+				<input type="text" class="children" name="children" id="children" required>
 			</div>
 		</div>
 

@@ -65,7 +65,18 @@ $(document).ready(function () {
 $('.active_gallery_block').click(function () {
   $('.fullSize_image').removeClass('active');
   $('.active_gallery_block').removeClass('active');
-  $('body').css('overflow', 'scroll');
+  $('body').css('overflow-y', 'scroll');
 });
+
+$('.order_room').click(function () {
+  $('.modal_room_order').fadeIn(200);
+  $('body').css('overflow', 'hidden');
+});
+
+$('.close, .modal_bg').click(function () {
+  $('.modal_room_order').fadeOut(500);
+  $('body').css('overflow-y', 'scroll');
+});
+
 
 });

@@ -1,6 +1,10 @@
 body {
   background: #412718;
-  color: #cccccc; }
+  color: #cccccc;
+  max-width: 1690px;
+  margin: 0 auto;
+  border-left: 1px solid #20130b;
+  border-right: 1px solid #20130b; }
 
 li {
   list-style: none; }
@@ -95,12 +99,12 @@ input:focus {
       margin-bottom: 0; }
       .header nav .menu_list .menu_elem {
         background: #8f5f26;
-        height: 45px; }
+        height: 42px; }
         .header nav .menu_list .menu_elem:not(:last-child) {
           margin-right: 4%; }
         .header nav .menu_list .menu_elem a {
           color: #fff;
-          padding: 11.8px 20px 15.5px 20px;
+          padding: 13.8px 20px 14.5px 20px;
           line-height: 3;
           -webkit-transition: all 0.2s linear;
           -o-transition: all 0.2s linear;
@@ -134,7 +138,7 @@ input:focus {
   width: 100%;
   height: 400%;
   z-index: 100;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.5);
   position: absolute; }
   .active_gallery_block.active {
     display: block; }
@@ -159,6 +163,137 @@ input:focus {
   .gallery_images_fullSize .fullSize_image img {
     width: 100%;
     height: 100%; }
+
+.modal_room_order {
+  display: none;
+  z-index: 50; }
+  .modal_room_order .order {
+    border: 1px solid #a46461;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 30%;
+    padding: 8px; }
+    .modal_room_order .order h4 {
+      font: normal normal 22px 'Georgia', sans-serif;
+      border-bottom: 1px solid #cccccc;
+      padding-bottom: 6px;
+      margin-top: 0; }
+    .modal_room_order .order label {
+      width: 100%; }
+    .modal_room_order .order input {
+      color: #8f5f26 !important;
+      width: 98.8%;
+      background: #20130b;
+      border: 1px solid #a46461;
+      margin: 4px 0 16px 0;
+      height: 22px;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box; }
+      .modal_room_order .order input:focus {
+        -webkit-box-shadow: 0 0 1px #ff9900;
+                box-shadow: 0 0 1px #ff9900; }
+    .modal_room_order .order:not(h4) {
+      font: normal normal 14px 'Verdana', sans-serif; }
+    .modal_room_order .order .arrival_date,
+    .modal_room_order .order .departure_date {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      .modal_room_order .order .arrival_date input,
+      .modal_room_order .order .departure_date input {
+        width: 30%; }
+    .modal_room_order .order .people_age {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-flow: row wrap;
+          -ms-flex-flow: row wrap;
+              flex-flow: row wrap;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .modal_room_order .order .people_age .adults,
+      .modal_room_order .order .people_age .children {
+        width: 100%; }
+      .modal_room_order .order .people_age .adult_age,
+      .modal_room_order .order .people_age .children_age {
+        width: 47%; }
+      .modal_room_order .order .people_age .adult_age {
+        margin-right: 8px; }
+    .modal_room_order .order button[type="submit"] {
+      width: 100%;
+      background: #a46461;
+      border: 1px solid black;
+      color: #fff;
+      margin: 10px 0 20px 0;
+      padding: 6px 0;
+      -webkit-transition: all 0.2s linear;
+      -o-transition: all 0.2s linear;
+      transition: all 0.2s linear; }
+      .modal_room_order .order button[type="submit"]:hover {
+        -webkit-box-shadow: 0 0 4px 1px #a46461;
+                box-shadow: 0 0 4px 1px #a46461; }
+      .modal_room_order .order button[type="submit"]:active {
+        outline: none; }
+    .modal_room_order .order .room_info {
+      position: relative;
+      top: 15%; }
+      .modal_room_order .order .room_info h4 {
+        margin: 0; }
+      .modal_room_order .order .room_info .pdf_file {
+        background: #e9e9c0;
+        border: none;
+        padding: 10px;
+        color: #a46461; }
+        .modal_room_order .order .room_info .pdf_file img {
+          float: left; }
+        .modal_room_order .order .room_info .pdf_file p {
+          width: 80%;
+          float: right;
+          font: normal normal 11px 'Verdana', sans-serif; }
+  .modal_room_order .modal_bg {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 400%;
+    position: absolute;
+    z-index: 50; }
+  .modal_room_order .order {
+    width: 30%;
+    padding-top: 0;
+    padding-bottom: 0;
+    top: 20%;
+    left: 35%;
+    position: fixed;
+    background-color: #412718;
+    z-index: 1000;
+    -webkit-box-sizing: padding-box;
+            box-sizing: padding-box; }
+    .modal_room_order .order .close {
+      font-weight: bold;
+      font-size: 20px;
+      color: #a46461;
+      cursor: pointer;
+      float: right;
+      display: inline-block; }
+      .modal_room_order .order .close:hover {
+        text-shadow: 0 0 4px #a46461; }
+    .modal_room_order .order h4 {
+      text-align: center; }
+    .modal_room_order .order button[type="submit"] {
+      margin-bottom: 10px; }
 
 .main {
   width: 96%;
@@ -246,6 +381,9 @@ input:focus {
         height: 22px;
         -webkit-box-sizing: border-box;
                 box-sizing: border-box; }
+        .main .first_sect .order input:focus {
+          -webkit-box-shadow: 0 0 1px #ff9900;
+                  box-shadow: 0 0 1px #ff9900; }
       .main .first_sect .order:not(h4) {
         font: normal normal 14px 'Verdana', sans-serif; }
       .main .first_sect .order .arrival_date,
@@ -333,7 +471,7 @@ input:focus {
         -ms-flex-pack: justify;
             justify-content: space-between;
     margin: 20px 0; }
-    .main .second_sect.about, .main .second_sect.faq, .main .second_sect.room, .main .second_sect.gallery {
+    .main .second_sect.about, .main .second_sect.faq, .main .second_sect.room, .main .second_sect.post, .main .second_sect.gallery {
       background: #5b3a27;
       margin-top: 0; }
     .main .second_sect .second_sect_block {
@@ -354,11 +492,13 @@ input:focus {
     .main .second_sect .about_block,
     .main .second_sect .faq_block,
     .main .second_sect .room_block,
+    .main .second_sect .post_block,
     .main .second_sect .gallery_block {
       padding: 20px; }
       .main .second_sect .about_block h3,
       .main .second_sect .faq_block h3,
       .main .second_sect .room_block h3,
+      .main .second_sect .post_block h3,
       .main .second_sect .gallery_block h3 {
         margin-top: 0;
         border-bottom: 1px solid #412718; }
@@ -428,22 +568,32 @@ input:focus {
               text-shadow: 0 0 4px #99cc00; }
         .main .second_sect .home_block .info_room .info_room_blocks .info_room_block:not(:last-child) {
           margin-right: 20px; }
-    .main .second_sect .about_block .about_image {
+    .main .second_sect .about_block .about_image,
+    .main .second_sect .about_block .post_image,
+    .main .second_sect .post_block .about_image,
+    .main .second_sect .post_block .post_image {
       margin: 0 auto; }
-      .main .second_sect .about_block .about_image img {
+      .main .second_sect .about_block .about_image img,
+      .main .second_sect .about_block .post_image img,
+      .main .second_sect .post_block .about_image img,
+      .main .second_sect .post_block .post_image img {
         width: 100%;
         height: 100%; }
-    .main .second_sect .about_block .about_text h4 {
+    .main .second_sect .about_block .about_text h4,
+    .main .second_sect .about_block .post_text h4,
+    .main .second_sect .post_block .about_text h4,
+    .main .second_sect .post_block .post_text h4 {
       font: normal normal 20px 'Georgia', sans-serif; }
-    .main .second_sect .about_block .about_text p {
+    .main .second_sect .about_block .about_text p,
+    .main .second_sect .about_block .post_text p,
+    .main .second_sect .post_block .about_text p,
+    .main .second_sect .post_block .post_text p {
       font: normal normal 12px 'Verdana', sans-seri; }
     .main .second_sect .faq_block .accordion {
       padding: 0; }
       .main .second_sect .faq_block .accordion .inner {
         overflow: hidden;
         display: none; }
-        .main .second_sect .faq_block .accordion .inner.show {
-          /*display: block;*/ }
       .main .second_sect .faq_block .accordion .accordion_elem a.toggle {
         width: 97.8%;
         display: block;
@@ -475,7 +625,20 @@ input:focus {
         margin-bottom: 20px;
         background: #e9e9c0;
         width: 44%;
-        padding: 10px 10px; }
+        padding: 10px 10px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-flow: column nowrap;
+            -ms-flex-flow: column nowrap;
+                flex-flow: column nowrap;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between; }
         .main .second_sect .room_block .room_container .room_block_elem header {
           text-align: center;
           border-bottom: 1px solid black;
@@ -483,7 +646,7 @@ input:focus {
           margin-bottom: 20px; }
           .main .second_sect .room_block .room_container .room_block_elem header h4 {
             font: normal normal 20px 'Georgia', sans-serif;
-            margin: 0; }
+            margin: 10px 0 0 0; }
           .main .second_sect .room_block .room_container .room_block_elem header img {
             width: 100%;
             min-height: 200px;
@@ -499,7 +662,8 @@ input:focus {
           position: relative;
           text-align: right;
           font: bold normal 16px 'Verdana', sans-serif;
-          color: #a46461; }
+          color: #a46461;
+          z-index: 10; }
           .main .second_sect .room_block .room_container .room_block_elem footer .order_room {
             width: 100%;
             background: #a46461;
@@ -748,7 +912,7 @@ input:focus {
             justify-content: space-between;
     background: #311d11; }
 
-@media screen and (min-width: 1680px) {
+@media screen and (min-width: 1670px) {
   .main .first_sect .slider .slider_main .slick-list .slick-track .slick-slide .slider_elem {
     height: 580px; }
   .main .first_sect .order .room_info {
@@ -768,17 +932,30 @@ input:focus {
         float: right;
         font: normal normal 11px 'Verdana', sans-serif; } }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1270px) {
+  .modal_room_order .order {
+    width: 40%;
+    left: 30%; }
   .main .first_sect .slider .slider_main .slick-list .slick-track .slick-slide .slider_elem {
     height: 480px !important; }
   .main .first_sect .slider .slider_nav .slick-list .slick-track .slick-slide {
-    height: 166px !important; }
+    height: 136px !important; }
     .main .first_sect .slider .slider_nav .slick-list .slick-track .slick-slide .slider_elem_nav {
-      height: 166px !important; }
+      height: 136px !important; }
   .main .second_sect .home_block img {
     height: 150px; } }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1140px) {
+  .main .first_sect .slider .slider_main .slick-list .slick-track .slick-slide .slider_elem {
+    height: 480px !important; }
+  .main .first_sect .slider .slider_nav .slick-list .slick-track .slick-slide {
+    height: 126px !important; }
+    .main .first_sect .slider .slider_nav .slick-list .slick-track .slick-slide .slider_elem_nav {
+      height: 126px !important; }
+  .main .second_sect .home_block img {
+    height: 150px; } }
+
+@media screen and (max-width: 1014px) {
   .gallery_images_fullSize .fullSize_image {
     left: 20%;
     width: 60%; }
@@ -911,6 +1088,16 @@ input:focus {
       margin-right: 3%; } }
 
 @media screen and (max-width: 768px) {
+  .modal_room_order .order {
+    width: 80%;
+    left: 10%; }
+    .modal_room_order .order input {
+      width: 100%;
+      padding: 15px 5px; }
+    .modal_room_order .order:not(h4) {
+      font: normal normal 14px 'Verdana', sans-serif; }
+    .modal_room_order .order button[type="submit"] {
+      padding: 20px 0 20px 0; }
   .gallery_images_fullSize .fullSize_image {
     left: 9.5%;
     width: 80%; }
