@@ -3,11 +3,13 @@ $(document).ready(function () {
   $('#mob_btn').click(function (e) {
     e.preventDefault();
     $('.nav_mobile').toggleClass('active');
+    $('.header').css({opacity: '1', position: 'relative'});
   });
 
   $('#exit_btn').click(function (e) {
     e.preventDefault();
     $('.nav_mobile').removeClass('active');
+    $('.header').css({opacity: '0.8', position: 'sticky'});
   });
 
 
