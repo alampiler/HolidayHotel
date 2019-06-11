@@ -73,13 +73,11 @@ $('.active_gallery_block').click(function () {
 $('.order_room').click(function () {
   $('.modal_room_order').fadeIn(200);
   $('body').css('overflow', 'hidden');
-  $('.header').css({opacity: '1', position: 'relative'});
 });
 
 $('.close, .modal_bg').click(function () {
   $('.modal_room_order').fadeOut(500);
   $('body').css('overflow-y', 'scroll');
-  $('.header').css({opacity: '0.8', position: 'sticky'});
 });
 
 
