@@ -263,7 +263,8 @@ input:focus {
         background: #e9e9c0;
         border: none;
         padding: 10px;
-        color: #a46461; }
+        color: #a46461;
+        display: inline-block; }
         .modal_room_order .order .room_info .pdf_file img {
           float: left; }
         .modal_room_order .order .room_info .pdf_file p {
@@ -455,7 +456,8 @@ input:focus {
           background: #e9e9c0;
           border: none;
           padding: 10px;
-          color: #a46461; }
+          color: #a46461;
+          display: inline-block; }
           .main .first_sect .order .room_info .pdf_file img {
             float: left; }
           .main .first_sect .order .room_info .pdf_file p {
@@ -1143,6 +1145,7 @@ input:focus {
     .header .nav_mobile {
       background: rgba(65, 39, 24, 0.96);
       position: fixed;
+      overflow-x: scroll;
       height: 100%;
       top: 0;
       z-index: 100;
